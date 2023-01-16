@@ -1,0 +1,18 @@
+<h2>Articles List: </h2>
+<% @articles.each do |article| %>
+  <div class="row card">
+    <div class="block">
+        <img src="<%= article[:photos][0][:files][:medium] %>"/>
+      <div>
+        <h2> <%= article[:title] %> </h2>
+        <p> <%= article[:description] %> </p>
+        <p> Collection Notes: <%= article[:collection_notes] %></p>
+        <p> Location: <%= article[:location][:town] %>, <%= article[:location][:country] %></p>
+      </div>
+      <div>
+        <p> Likes: <%= article[:reactions][:likes]  %></p>
+        <%= button_to "👍🏻", like_path, params: { article_id: article[:id]},  method: :post%>
+      </div>
+    </div>
+  </div>
+<% end %>

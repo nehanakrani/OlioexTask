@@ -1,0 +1,23 @@
+.block {
+  overflow: hidden;
+  background: #ffff;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.block img {
+  width: 75px;
+  height: 75px;
+  float: left;
+  margin: 0 1rem 0 0;
+}
+
+.block h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  width: 65%;
+}
