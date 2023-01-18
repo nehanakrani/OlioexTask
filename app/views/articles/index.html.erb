@@ -1,4 +1,4 @@
-<h2>Articles List: </h2>
+<h2>Articles List</h2>
 <% @articles.each do |article| %>
   <div class="row card">
     <div class="block">
@@ -9,7 +9,7 @@
         <p> Collection Notes: <%= article[:collection_notes] %></p>
         <p> Location: <%= article[:location][:town] %>, <%= article[:location][:country] %></p>
       </div>
-      <div>
+      <div class="likes">
         <p> Likes: <%= article[:reactions][:likes]  %></p>
         <%= button_to "👍🏻", like_path, params: { article_id: article[:id]},  method: :post%>
       </div>
